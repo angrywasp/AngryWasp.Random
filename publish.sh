@@ -24,5 +24,5 @@ function getNewVersion()
 
 version=$(getNewVersion $1 patch)
 
-#dotnet build -c Release Src/AngryWasp.Random.sln -p:PackageVersion=${version}
-#dotnet nuget push Bin/Binaries/AngryWasp.Random.${version}.nupkg --source https://api.nuget.org/v3/index.json
+dotnet build -c Release Src/AngryWasp.Random.sln -p:PackageVersion=${version}
+dotnet nuget push Bin/Binaries/AngryWasp.Random.${version}.nupkg --source https://api.nuget.org/v3/index.json

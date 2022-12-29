@@ -14,7 +14,7 @@ namespace AngryWasp.Random
             SetState(r);
         }
 
-        public void Reseed(uint seed) => Helper.KeccakHash(UIntToByte(seed), 128);
+        public void Reseed(uint seed) => SetState(Helper.KeccakHash(UIntToByte(seed), 128));
 
         private void SetState(byte[] r)
         {
